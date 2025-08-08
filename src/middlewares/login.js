@@ -44,8 +44,6 @@ class Login {
       const data = JSON.parse(content);
       const now = Math.round(new Date().getTime() / 1000);
       
-      console.log(data);
-      
       if ((now - data.timestamp) >= 60) {
         return res.send(Login.set({ status: 400, message: "Request Invalid 3" }));
       }
