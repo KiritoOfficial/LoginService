@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsx watch src/server.js",
-    "start": "tsx watch src/server.js"
+    "start": "tsx src/server.js"
   },
   "dependencies": {
     "better-sqlite3": "^12.2.0",
