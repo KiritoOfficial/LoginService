@@ -22,7 +22,7 @@ class Login {
         message: "User Authenticated",
         secret: secretToken,
         timestamp: Math.round(new Date().getTime() / 1000),
-        expiry: now + 60
+        expiry: now + 7200
       }
       
       return Login.set(response);
