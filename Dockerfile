@@ -2,6 +2,8 @@ FROM node:18-alpine
 
 WORKDIR /app
 
+RUN apk add --no-cache python3 make g++
+
 COPY db ./db
 COPY yarn*.lock ./
 COPY package*.json ./
