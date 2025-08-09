@@ -108,7 +108,13 @@ const getKeyCommand = async (msg) => {
       });
     }
     
-    const token = await createKey(user.id);
+    let expiresAt = null;
+    if (userId == 1919841862) {
+        const TIME = 24 * 60 * 60 * 1000;
+        expiresAt = new Date(Date.now() + TIME);
+    }
+    
+    const token = await createKey(user.id, 1, expiresAt);
     
     let text = ``;
     text += `🚀 *Key generated!*`;
